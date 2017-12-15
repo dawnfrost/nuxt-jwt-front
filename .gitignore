@@ -13,6 +13,11 @@ dist
 # Backpack build
 build
 
+# WebStorm
 .idea
 
+# npm package lock
 *.lock
+
+# temp files
+temp
