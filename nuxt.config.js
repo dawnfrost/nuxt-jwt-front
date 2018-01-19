@@ -1,7 +1,4 @@
 module.exports = {
-    /*
-     ** Headers of the page
-     */
     head: {
         title: 'starter',
         meta: [
@@ -12,14 +9,22 @@ module.exports = {
             {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
         ]
     },
-    /*
-     ** Global CSS
-     */
-    css: [{
-        src: '~/assets/css/main.less',
-        lang: 'less'
-    }],
-    plugins: [],
+    cache: true,
+    css: [
+        {
+            src: '~/assets/theme/index.css'
+        },
+        {
+            src: '~/assets/css/main.less',
+            lang: 'less'
+        }
+    ],
+    plugins: [
+        {
+            src: '~plugins/element-ui',
+            ssr: true
+        }
+    ],
     modules: [
         '@nuxtjs/axios'
     ],
@@ -33,19 +38,26 @@ module.exports = {
             return config;
         }
     },
-    /*
-     ** Add axios globally
-     */
     build: {
         vendor: [
             'jquery',
-            'lodash'
+            'lodash',
+            'element-ui'
         ],
         postcss: [
             require('postcss-nested')(),
             require('postcss-responsive-type')(),
             require('postcss-hexrgba')()
         ],
+        babel: {
+            plugins: [['component', [
+                {
+                    libraryName: 'element-ui'
+                },
+                'transform-async-to-generator',
+                'transform-runtime'
+            ]]]
+        },
         /*
          ** Run ESLINT on save
          */

@@ -9,6 +9,7 @@
             <h2>{{getDataSourceId}}</h2>
             <h3>{{getCounter}}</h3>
             <h3>{{getUserId}}</h3>
+            <el-button type="primary">aaasssss</el-button>
             <div class="links">
                 <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
                 <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
