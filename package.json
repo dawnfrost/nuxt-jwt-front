@@ -34,6 +34,8 @@
     "babel-eslint": "^7.2.3",
     "babel-plugin-component": "^0.10.1",
     "backpack-core": "^0.4.1",
+    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap-vue": "^1.4.1",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",
@@ -46,6 +48,7 @@
     "less-loader": "^4.0.5",
     "postcss-hexrgba": "^1.0.0",
     "postcss-nested": "^3.0.0",
-    "postcss-responsive-type": "^1.0.0"
+    "postcss-responsive-type": "^1.0.0",
+    "sass-loader": "^6.0.6"
   }
 }

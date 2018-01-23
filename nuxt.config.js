@@ -17,16 +17,25 @@ module.exports = {
         {
             src: '~/assets/css/main.less',
             lang: 'less'
+        },
+        {
+            src: 'bootstrap/scss/bootstrap.scss',
+            lang: 'scss'
         }
     ],
     plugins: [
         {
             src: '~plugins/element-ui',
             ssr: true
+        },
+        {
+            src: '~plugins/bootstrap.js',
+            ssr: false
         }
     ],
     modules: [
-        '@nuxtjs/axios'
+        '@nuxtjs/axios',
+        'bootstrap-vue/nuxt'
     ],
     axios: {
         credentials: true,
@@ -42,7 +51,8 @@ module.exports = {
         vendor: [
             'jquery',
             'lodash',
-            'element-ui'
+            'element-ui',
+            'bootstrap'
         ],
         postcss: [
             require('postcss-nested')(),
