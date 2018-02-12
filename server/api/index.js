@@ -5,6 +5,6 @@ import users from './users';
 const router = Router();
 
 // Add USERS Routes
-router.use(users);
+router.use('/api/', users);
 
 export default router;

@@ -76,16 +76,16 @@
 </style>
 
 <script>
-    export default {
-        name: 'logo',
-        serverCacheKey() {
-            // Will change every 10 secondes
-            return Math.floor(Date.now() / 10000);
-        },
-        data() {
-            return {
-                date: Date.now()
-            };
-        }
-    };
+  export default {
+    name: 'logo',
+    serverCacheKey() {
+      // Will change every 10 secondes
+      return Math.floor(Date.now() / 10000);
+    },
+    data() {
+      return {
+        date: Date.now()
+      };
+    }
+  };
 </script>

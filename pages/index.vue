@@ -63,43 +63,43 @@
 </template>
 
 <script>
-    import Logo from '~/components/Logo.vue';
-    import {mapGetters, mapMutations} from 'vuex';
-    import $ from 'jquery';
+  import Logo from '~/components/Logo.vue';
+  import {mapGetters, mapMutations} from 'vuex';
+  import $ from 'jquery';
 
-    export default {
-        name: 'index',
-        components: {
-            Logo
-        },
-        serverCacheKey() {
-            // Will change every 10 secondes
-            return Math.floor(Date.now() / 10000);
-        },
-        data() {
-            return {
-                date: Date.now()
-            };
-        },
-        computed: {
-            ...mapGetters({
-                getDataSourceId: 'getDataSourceId',
-                getCounter: 'getCounter',
-                getUserId: 'user/getId'
-            })
-        },
-        mounted() {
-            $('#xxx').text('front ---  aaa');
-            this.$axios.get('http://localhost:8090/pws/test/1').then(response => {
-                console.log(response);
-            });
-        },
-        methods: {
-            ...mapMutations([
-                'increment'
-            ])
-        }
-    };
+  export default {
+    name: 'index',
+    components: {
+      Logo
+    },
+    serverCacheKey() {
+      // Will change every 10 secondes
+      return Math.floor(Date.now() / 10000);
+    },
+    data() {
+      return {
+        date: Date.now()
+      };
+    },
+    computed: {
+      ...mapGetters({
+        getDataSourceId: 'getDataSourceId',
+        getCounter: 'getCounter',
+        getUserId: 'user/getId'
+      })
+    },
+    mounted() {
+      $('#xxx').text('front ---  aaa');
+      this.$axios.get('/api/users').then(response => {
+        console.log(response);
+      });
+    },
+    methods: {
+      ...mapMutations([
+        'increment'
+      ])
+    }
+  };
 </script>
 
 <style scoped lang="less">

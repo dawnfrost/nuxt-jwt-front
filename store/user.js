@@ -1,15 +1,15 @@
 export const state = () => ({
-    id: 22
+  id: 22
 });
 
 export const getters = {
-    getId: state => {
-        return state.id;
-    }
+  getId: state => {
+    return state.id;
+  }
 };
 
 export const mutations = {
-    setUserId(state, id) {
-        state.id = id;
-    }
+  setUserId(state, id) {
+    state.id = id;
+  }
 };
